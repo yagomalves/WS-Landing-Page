@@ -1,43 +1,21 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
-require './vendor/autoload.php';
+    if(isset($_POST['email'])) {
 
-if(isset($_POST["send"])) {
-    $mail = new PHPMailer(true);
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
 
-    try {
-        //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.google.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'hartzleryago@gmail.com';             //SMTP username
-        $mail->Password   = '**************';                     //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        if(mail('yago.melo@souunit.com.br', 'Orçamento WEED', 'Nome: ' . $name . '<br> Email remetente: ' . $email . '<br> Mensagem: ' . $message)) {
 
-        //Recipients
-        $mail->setFrom('hartzleryago@gmail.com', 'Weed');
-        $mail->addAddress('yago.melo@souunit.com.br', 'Yago');     //Add a recipient
-        // $mail->addAddress('ellen@example.com');               //Name is optional
-        $mail->addReplyTo('hartzleryago@gmail.com', 'Information');
+            echo 'Mensagem enviada com sucesso!';
+            
+        } else {
 
+            echo 'Falha no envio. Tente novamente mais tarde.';
 
-        //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Nova mensagem da weed';
-        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        }
 
-        $mail->send();
-        echo 'Message has been sent';
-    } catch (Exception $e) {
-        echo "Erro: {$mail->ErrorInfo}";
     }
-} else {
-    echo "Erro ao enviar email. Acesso não foi via formulário.";
-}
 
 ?>
