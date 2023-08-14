@@ -1,126 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 * {
-  font-family: sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+
 }
 
-.all {  
-    background-color: #4b955a;
-    display: flex;
-    align-items: center;
+.all {
+  background-color: #4b955a;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+
 }
 
 .a1 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.a1 p {
+  padding: 7px;
 }
 
 .a2 {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #4b955a;
-    
-    font-size: 32px;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4b955a;
+  font-size: 32px;
+  color: white;
 }
+
 h2 {
   display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    font-size: 32px;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #4b955a;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4b955a;
+  color: white;
 }
 
 aside {
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+button.modal-open {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
 }
 
 /* CSS DO MODAL */
 
 .modal-container {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background-color: rgba(0, 0, 0, .5);
-    top: 0px;
-    left: 0px;
-    z-index: 2000;
-    display: none;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container.show {
+  display: flex;
+}
+
+.modal {
+  background-color: white;
+  width: 60%;
+  min-width: 300px;
+  border-radius: 7px;
+  padding: 40px;
+  border: 10px solid #3e7a5a;
+  box-shadow: 0 0 0 10px white;
+  position: relative;
+}
+
+.modal input {
+  margin: 7px;
+}
+
+.show .modal {
+  animation: modal .4s;
+}
+
+.close {
+  font-size: 1.2em;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background-color: #3e7a5a;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}
+
+.sd {
+  border-radius: 6px;
+  box-shadow: 6px 3px 22px -8px rgba(0, 0, 0, 0.75);
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
   }
-  
-  .modal-container.mostrar {
-    display: flex;
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
-  
-  .modal {
-    background-color: white;
-    width: 60%;
-    min-width: 300px;
-    border-radius: 7px;
-    padding: 40px;
-    border: 10px solid #3e7a5a;
-    box-shadow: 0 0 0 10px white;
-    position: relative;
-  }
-  
-  .modal input {
-    margin: 7px;
-  }
-  
-  .mostrar .modal {
-    animation: modal .4s;
-  }
-  
-  .fechar {
-    font-size: 1.2em;
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 4px solid white;
-    background-color: #3e7a5a;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
-  }
-  
-  .sd{
-    border-radius: 6px;
-    box-shadow: 6px 3px 22px -8px rgba(0,0,0,0.75);
-  }
-  
-  @keyframes modal {
-    from {
-      opacity: 0;
-      transform: translate3d(0, -60px, 0);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  }
+}
