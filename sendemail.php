@@ -6,7 +6,7 @@
         $email = $_POST['email'];
         $message = $_POST['message'];
 
-        if(mail('yago.melo@souunit.com.br', 'Orçamento WEED', 'Nome: ' . $name . '<br> Email remetente: ' . $email . '<br> Mensagem: ' . $message)) {
+        if(mail('weed.sistemas@gmail.com', 'Orçamento WEED', 'Nome: ' . $name . 'Email remetente: ' . $email . 'Mensagem: ' . $message)) {
 
             echo 'Mensagem enviada com sucesso!';
             
