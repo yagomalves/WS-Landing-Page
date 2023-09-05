@@ -1,12 +1,3 @@
-<?php
-
-
-if (isset($_GET['emailSent']) && $_GET['emailSent'] === 'false') {
-    $errorMessage = isset($_GET['errorMessage']) ? urldecode($_GET['errorMessage']) : 'Erro desconhecido no envio de email.';
-    echo '<p style="color: red;">Erro ao enviar o email: ' . $errorMessage . '</p>';
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,12 +8,12 @@ if (isset($_GET['emailSent']) && $_GET['emailSent'] === 'false') {
     <title>Weed Sistemas</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./img/favicon/favicon.png" type="image/png">
+    <link rel="icon" href="./public/assets/img/favicon/favicon.png" type="image/png">
 
     <!-- CSS Links -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/webkit.css">
-    <link rel="stylesheet" href="./css/query.css">
+    <link rel="stylesheet" href="./public/assets/css/styles.css">
+    <link rel="stylesheet" href="./public/assets/css/webkit.css">
+    <link rel="stylesheet" href="./public/assets/css/query.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,7 +63,7 @@ if (isset($_GET['emailSent']) && $_GET['emailSent'] === 'false') {
 
 
             <div class="side-2">
-                <img src="./img/web.png" alt="Computador com homem trabalhando">
+                <img src="./public/assets/img/web.png" alt="Computador com homem trabalhando">
             </div>
 
         </div>
@@ -87,7 +78,7 @@ if (isset($_GET['emailSent']) && $_GET['emailSent'] === 'false') {
                 <h3>Entre em contato</h3>
                 <div class="loader loader-hidden"></div>
 
-                <form action="sendemail-2.php" method="POST" name='Form para envio de emails via modal'>
+                <form action="./sendemail.inc.php" method="POST" name='Form para envio de emails via modal'>
 
                     <label>Nome ou empresa</label>
                     <input type="text" name="name" class='txt-camp' required>
@@ -363,7 +354,7 @@ if (isset($_GET['emailSent']) && $_GET['emailSent'] === 'false') {
     <hr class='hr-2'>
 
     <section id="contact">
-        <form action="sendemail-2.php" method="POST" id='footerForm' name='Form para envio de emails via modal'>
+        <form action="./sendemail.inc.php" method="POST" id='footerForm' name='Form para envio de emails via modal'>
             <h3>Entre em contato</h3>
             <div class="loader loader-hidden"></div>
             <div class='fields'>
@@ -433,8 +424,8 @@ if (isset($_GET['emailSent']) && $_GET['emailSent'] === 'false') {
     </script>
 
     <!-- Javascript Links -->
-    <script src="js/phoneMask.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="./public/assets/js/phoneMask.js"></script>
+    <script src="./public/assets/js/modal.js"></script>
 
 
 </body>
