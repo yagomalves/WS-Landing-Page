@@ -128,12 +128,19 @@ div.header {
 
 
 button.modal-open {
-  padding: 7px;
-  border-radius: 5px;
-  border: 1px solid var(--White);
-  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--White);
+  background-color: transparent; /* Substitua com a cor desejada */
   color: var(--White);
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
   outline: none;
+  cursor: pointer; 
+  transition: 0.3s ease;
+}
+
+button.modal-open:hover {
+  background-color: #58b36a; /* Defina a cor de destaque quando o botão é passado por cima */
 }
 
 /* CSS DO MODAL */
@@ -222,15 +229,20 @@ button.modal-open {
   margin-top: 2rem;
   width: 100%;
   padding-left: 2rem;
+  padding-right: 0;
 }
 
 .main-content h1{
   margin-bottom: 1rem;
-  font-size: 28px;
+  font-size: 27px;
 }
 
 .main-content p{
-  width: 70%;
+  width: 85%;
+}
+
+.main-content span{
+  color: var(--Secondary-green);
 }
 
 .reasons li:nth-of-type(3){

@@ -15,6 +15,20 @@
     <link rel="stylesheet" href="./public/assets/css/webkit.css">
     <link rel="stylesheet" href="./public/assets/css/query.css">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MW9WKP19L">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2MW9WKP19L');
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,7 +101,7 @@
                     <input type="email" name="email" class='txt-camp' required>
 
                     <label>Telefone</label>
-                    <input type="tel" name="phone" class='txt-camp' maxlength="15" onkeyup="handlePhone(event)" required>
+                    <input type="tel" name="phone" class='txt-camp' maxlength="15" placeholder='(99) 99999-9999' onkeyup="handlePhone(event)" required>
 
                     <label>Mensagem</label>
                     <textarea placeholder="Digite uma mensagem para nossos desenvolvedores!" name="message" class='txt-camp'></textarea>
@@ -104,7 +118,7 @@
         <h1>A Importância Indiscutível de Ter um Site para a Sua Empresa</h1>
         <div class="content">
             <p>
-                Na era digital atual, a presença online de empresas é indispensável, não um luxo. Ter um site é uma
+                Na era digital atual, a presença online de empresas é <span>indispensável, não um luxo</span>. Ter um site é uma
                 estratégia crucial para o crescimento, visibilidade e sucesso a longo prazo. Eis algumas razões para
                 considerar a criação de um site para sua empresa:
             </p>
@@ -366,7 +380,7 @@
                 <input type="email" name="email" class='txt-camp' required>
 
                 <label>Telefone</label>
-                <input type="tel" name="phone" class='txt-camp' maxlength="15" onkeyup="handlePhone(event)" required>
+                <input type="tel" name="phone" class='txt-camp' maxlength="15" placeholder='(99) 99999-9999' onkeyup="handlePhone(event)" required>
 
                 <label>Mensagem</label>
                 <textarea placeholder="Digite uma mensagem para nossos desenvolvedores!" name="message" class='txt-camp'></textarea>
